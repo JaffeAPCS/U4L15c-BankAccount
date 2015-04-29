@@ -13,50 +13,41 @@ import org.junit.Test;
  */
 public class BankAccountTest
 {
+    // Main function called to run tests
+    public static void main([]) {
+        BankAccountTest tester = new BankAccountTest();
+        tester.testConstructor1();
+        tester.testConstructor2();
+        tester.testGetBalance();
+        tester.testGetName();
+        tester.testWithdraw();
+        tester.testWithdrawNegativeAmount();
+        tester.testWithdrawOverdrawn();
+        tester.testDeposit();
+        tester.testDepositNegative();
+    }
+
     /**
      * Default constructor for test class BankAccountTest
      */
     public BankAccountTest()
     {
+        
     }
 
-    /**
-     * Sets up the test fixture.
-     *
-     * Called before every test case method.
-     */
-    @Before
-    public void setUp()
-    {
-    }
-
-    /**
-     * Tears down the test fixture.
-     *
-     * Called after every test case method.
-     */
-    @After
-    public void tearDown()
-    {
-    }
-
-    @Test
+    // Since there are two types of constructors for this class
+    // we need to test them both.  
     public void testConstructor1()
     {
-        BankAccount bankAcco1 = new BankAccount("Roger");
-        assertEquals("testConstructor1: name='Roger'", "Roger", bankAcco1.name);
-        assertEquals("testConstructor1: balance=0", 0, bankAcco1.balance, 0.1);
+        BankAccount bankAccount1 = new BankAccount("Roger");
+        System.out.println("Bank account constructor 1 test: name=Roger, balance=0: "+bankAccount1.name+' '+bankAccount1.balance);
     }
 
-    @Test
     public void testConstructor2()
     {
-        BankAccount bankAcco1 = new BankAccount("Roger", 100);
-        assertEquals("testConstructor1: name='Roger'", "Roger", bankAcco1.name);
-        assertEquals("testConstructor1: balance=100", 100, bankAcco1.balance, 0.1);
+
     }
 
-    @Test
     public void testGetBalance()
     {
         BankAccount bankAcco1 = new BankAccount("Roger", 100);
