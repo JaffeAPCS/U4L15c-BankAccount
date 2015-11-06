@@ -14,7 +14,7 @@ import org.junit.Test;
 public class BankAccountTest
 {
     // Main function called to run tests
-    public static void main([]) {
+    public static void main() {
         BankAccountTest tester = new BankAccountTest();
         tester.testConstructor1();
         tester.testConstructor2();
